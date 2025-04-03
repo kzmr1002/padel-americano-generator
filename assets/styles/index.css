@@ -87,6 +87,7 @@ body{
     height:75px;
     font-family: "Dekko";
     font-size: large;
+    border: 1 px solid black;
     border-radius: 8px;
     background-color: cadetblue;
     color:black;
