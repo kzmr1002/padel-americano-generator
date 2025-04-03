@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padel Americano</title>
+    <link rel="stylesheet" href="assets/styles/index.css">
+</head>
+<body>
+    <div id="app-container">
+        <h1 id="main-header">Create New Americano Tournament</h1>
+        <div id="main">
+            <div id="main-left">
+                <div class="form-container">
+                    <label for="tournamentName">Tournament name:</label>
+                    <br>
+                    <input type="text" id="tournament-name" class="input-form">
+                </div>
+                <div class="form-container">
+                    <label for="pointsPerMatch">Points per Match:</label>
+                    <br>
+                    <input type="text" id="point-number" class="input-form">
+                </div>
+                <div class="form-container">
+                    <label for="courtNumber">Number of Courts:</label>
+                    <br>
+                    <input type="text" id="court-number" class="input-form">
+                </div>
+                <div class="form-container">
+                    <label for="playerName">Add Player:</label>
+                    <br>
+                    <input type="text" id="player-name" class="input-form">
+                    <br>
+                    <button id="add-player-btn">Add</button>
+                </div>
+            </div>
+            <div id="main-right">
+                <h3 id="players-heading">Players:</h3>
+                <ol id="player-list"></ol>
+            </div>
+        </div>
+        <div id="create-btn-container">
+            <button id="create-btn">Create Tournament</button>
+        </div>
+        <div id="info-container">
+            <h3 id="info-heading">How to play Americano?</h3>
+            <p>
+                The idea of Americano is that every participant plays with all the other participants. You gather points for yourself by winning individual points during matches. A match lasts for a predefined number of points, eg. 32 points. Each point won gives you and your partner a point. When the match is completed (32 points have been played), the result is entered into the app. A result of 20-12 will give 20 points to the winners of the match and 12 points to the losers of the match. The fun in Americano is that every point matters!
+            </p>
+            <p>
+                After this, players will switch courts according to the list provided by the app, and play another match of 32 points. After the second match, the points from the second match will be added to the points from the first match, and so on… until all matches have been played and you have final standings, and thus, also a winner of the tournament.
+            </p>
+            <p>
+                With our Americano app, you do not have to worry about calculating the points yourself or think about who is supposed to play with whom. Our website does this all for you, completely free of charge!
+            </p>
+            <p>
+                We would recommend playing Americano to 32 points or to another number that gives an equal number of serves to each player. Also, if you do not wish to have any breaks between matches, you should play with 4, 8, 12, 16, 20, etc. (divisible by 4) players and add courts respectively: 1, 2, 3, 4, 5, and so on.
+            </p>
+            <p>
+                Normally an Americano with 32 points matches with 8 players is completed in about 2 hours. This is the most popular Americano format.
+            </p>
+            <p>
+                We wish you fun times playing Americano!
+            </p>
+        </div>
+    </div>
+
+    <script src="assets/scripts/index.js"></script>
+</body>
+</html>

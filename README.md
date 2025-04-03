@@ -1,0 +1,59 @@
+# Padel Americano Tournament App
+
+This is a fully frontend-based application to manage and simulate an Americano-style padel tournament. Add players, define match rules, generate randomized matches, track scores, and view a live-updating leaderboard. All in your browser.
+
+---
+
+## Features
+
+- Add any number of players 
+- Set custom number of courts and points per match
+- Randomized team matchups for each round
+- Automatic score calculation between teams
+- Keeps track of individual player scores
+- Live leaderboard after each round
+- Final standings view with winner display
+
+---
+
+## How to Use
+
+1. Open `index.html` in your browser
+2. Fill in tournament name, points per match, and number of courts
+3. Add players 
+4. Click "Create Tournament"
+5. On the next page:
+   - Enter match results
+   - Click "Complete Round"
+   - Click "New Round" to continue
+6. Click "Finish Tournament" when done to see final rankings
+
+---
+
+## Project Structure
+
+assets/
+  img/           # Background image(s)
+  styles/        # CSS files (one per view)
+  scripts/       # JS files (one per view)
+
+index.html       # Tournament setup page
+play.html        # Live match round view
+results.html     # Final leaderboard
+
+---
+
+## Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+- LocalStorage API 
+
+---
+
+## Limitations
+
+- No persistent backend (data stored in browser)
+- Page refresh will reset tournament unless stored in future update
+

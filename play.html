@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padel Americano</title>
+    <link rel="stylesheet" href="assets/styles/play.css">
+</head>
+<body>
+    <div id="app-container">
+        <h1 id="main-header"></h1>
+        <div id="matches-container">
+            <div class="match">
+                <div class="match-players-container">
+                    <div class="match-player">p1</div>
+                    <div class="match-player">p2</div>
+                </div>
+                <div class="score-container">
+                    score
+                </div>
+                <div class="match-players-container">
+                    <div class="match-player">p1</div>
+                    <div class="match-player">p2</div>
+                </div>
+            </div>
+        </div>
+        <div id="sitting-container">
+            <h3 id="sitting-heading">Sitting:</h3>
+            <ul id="sitting-list"></ul>
+        </div>
+        <div id="buttons-container">
+            <div id="non-finsih-btn-container">
+                <button id="complete-round-btn" class="control-button">Complete round</button>
+                <button id="new-round-btn" class="control-button">New round</button>
+            </div>
+            <button id="finish-btn" class="control-button">Finish tournament</button>
+        </div>
+        <div id="leaderboard-container" style="margin-top: 50px;">
+            <h2 id="leaderboard-heading">Leaderboard</h2>
+            <table id="leaderboard-table">
+              <thead id="leaderboard-header"></thead>
+              <tbody id="leaderboard-body"></tbody>
+            </table>
+          </div>
+    </div>
+    <script src="assets/scripts/play.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+body{
+    font-family:cursive;
+    background-image: url('../img/background3.png');
+    background-repeat: repeat;
+    background-size:2000px auto;
+    background-attachment: fixed;
+    color:black
+}
+
+#app-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#new-tournament-btn{
+    height:75px;
+    font-family: cursive;
+    font-size: large;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+#new-tournment-btn:active{
+    background-color: green;
+}
+
+
+#leaderboard-table {
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    font-size: 1.2rem;
+    text-align: center;
+}
+  

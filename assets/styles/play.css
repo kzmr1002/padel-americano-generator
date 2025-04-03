@@ -1,0 +1,124 @@
+body{
+    font-family:cursive;
+    background-image: url('../img/background3.png');
+    background-repeat: repeat;
+    background-size:2000px auto;
+    background-attachment: fixed;
+    color:black
+    
+}
+
+#app-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-header{
+    margin-top: 75px;
+    margin-bottom:75px;
+}
+
+
+/* ----matches section------ */
+#matches-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.match{
+    width:700px;
+    height:100px;
+    background-color:cadetblue;
+    border:3px solid black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+
+
+.match-players-container{
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#sitting-heading{
+    margin-bottom: 0px;
+}
+
+#sitting-list{
+    list-style:none;
+    padding-left: 0px;
+    margin-top: 0px;
+}
+
+
+.score-container select {
+    font-family: cursive;
+    font-size: 16px;
+    margin: 0 5px;
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+
+/* -----control buttons section-----*/
+  #buttons-container{
+    width: 700px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .control-button{
+    height:50px;
+    font-family: cursive;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .control-button:active{
+    background-color: green;
+  }
+
+
+
+  /* ------leaderboard section------ */
+
+  #leaderboard-container {
+    text-align: center;
+    margin-bottom: 100px;
+  } 
+
+  #leaderboard-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+  #leaderboard-table th,
+  #leaderboard-table td {
+    border: 1px solid #333;
+    padding: 8px;
+    font-family: cursive;
+  }
+  
+  #leaderboard-table th {
+    background-color: #b6e0bc;
+  }
+  
+  #leaderboard-table td {
+    background-color: #f2fff2;
+  }
+  
