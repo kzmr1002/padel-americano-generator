@@ -60,17 +60,16 @@ body{
     margin-top: 0px;
 }
 
-
 .score-container select {
-    font-family: cursive;
-    font-size: 16px;
-    margin: 0 5px;
-    padding: 4px;
-    border-radius: 4px;
-  }
+  font-family: cursive;
+  font-size: 16px;
+  margin: 0 5px;
+  padding: 4px;
+  border-radius: 4px;
+}
 
 
-/* -----control buttons section-----*/
+  /* -----control buttons section-----*/
   #buttons-container{
     width: 700px;
     margin-top: 20px;
@@ -121,4 +120,44 @@ body{
   #leaderboard-table td {
     background-color: #f2fff2;
   }
+
+
+
+  /* media */
+  @media(max-width:768px) and (min-width:501px){
+   
+    .match{
+      width: 500px;
+      height: auto;
+      padding: 15px;
+    }
+
+    #buttons-container{
+      width:500px;
+    }
+    
+    .score-container {
+      margin: 10px 0;
+    }
+  }
+
+
+
+@media(max-width:500px){
   
+  .match{
+    width: 400px;
+    height: auto;
+    padding: 15px;
+  }
+
+  #buttons-container{
+    width:400px;
+  }
+
+  .score-container {
+    margin: 10px 0;
+  }
+
+}
+
