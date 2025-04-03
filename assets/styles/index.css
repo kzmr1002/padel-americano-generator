@@ -56,7 +56,8 @@ body{
 
 #add-player-btn{
     background-color: white;
-    font-family: cursive;
+    color:black;
+    font-family:"Dekko";
     border-radius: 5px;
     margin-top: 4px;
     cursor: pointer;
@@ -88,6 +89,7 @@ body{
     font-size: large;
     border-radius: 8px;
     background-color: cadetblue;
+    color:black;
     cursor: pointer;
 
 }
