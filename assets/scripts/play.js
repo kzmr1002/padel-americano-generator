@@ -1,7 +1,7 @@
 let pointsPerMatch = 24;
 let playerScores = {};
 let rounds = [];
-
+let actRound = 1;
 
 //window onload
 window.onload = () => {
@@ -53,6 +53,12 @@ function renderMatches(matches, sitting,pointsPerMatch) {
     matchesContainer.innerHTML = '';  // clear html
     sittingList.innerHTML = '';
   
+    const roundHeading = document.createElement('h2');
+    roundHeading.innerText = `Round ${actRound}`;
+    actRound++;
+    roundHeading.className = 'round-heading';
+    matchesContainer.appendChild(roundHeading);
+
     matches.forEach(match => {
         const [p1, p2, p3, p4] = match;
   

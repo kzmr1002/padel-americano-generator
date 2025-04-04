@@ -77,9 +77,10 @@ body{
     margin-top: 0px;
 }
 
-#players-list{
+#player-list{
     padding-left:20px;
     margin-top: 10px;
+    font-size: larger;
 }
 
 
