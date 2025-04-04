@@ -161,6 +161,7 @@ document.getElementById('complete-round-btn').addEventListener('click', () => {
 
     // disable button
     document.getElementById('complete-round-btn').disabled = true;
+    document.getElementById('new-round-btn').disabled = false;
 });
 
 
@@ -174,6 +175,7 @@ document.getElementById('new-round-btn').addEventListener('click', () => {
 
     //enable complete round button
     document.getElementById('complete-round-btn').disabled = false;
+    document.getElementById('new-round-btn').disabled = true;
 });
 
 

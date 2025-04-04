@@ -30,17 +30,34 @@ addPlayerBtn.addEventListener('click',() =>{
 
 
 
+
+
+
 //create button
 createBtn.addEventListener('click',()=>{
     const tournamentName = tournamentNameInput.value.trim();
     const pointsPerMatch = pointNumberInput.value.trim();
     const courtNumber = courtNumberInput.value.trim();
 
-    //verifications
+    //check if every form is filled
     if(!tournamentName || !pointsPerMatch || !courtNumber ||players.length < 4){
         alert("Please fill out all forms and add at least 4 players!");
         return;
     }
+
+    //check if pointsPerMatch is a number
+    if(isNaN(Number(pointsPerMatch))){
+        alert("The 'Points per Match' field must contain a number");
+        return;
+    }
+
+    //check if courtNumber is a number
+    if(isNaN(Number(courtNumber))){
+        alert("The 'Number of Courts' field must contain a number");
+        return;
+    }
+
+
 
     localStorage.setItem('tournamentName', tournamentName);
     localStorage.setItem('pointsPerMatch', pointsPerMatch);
