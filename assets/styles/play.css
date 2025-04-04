@@ -17,8 +17,9 @@ body{
 
 #main-header{
     font-size: 8vh;
-    margin-top: 75px;
-    margin-bottom:75px;
+    margin-top: 7.5vh;
+    margin-bottom:7.5vh;
+    text-align: center;
 }
 
 
@@ -35,8 +36,8 @@ body{
 }
 
 .match{
-    width:700px;
-    height:100px;
+    width:70vh;
+    height:10vh;
     font-family: "Dekko";
     background-color:cadetblue;
     border:3px solid black;
@@ -44,18 +45,26 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    padding: 10px 20px;
+    margin-bottom: 2vh;
+    padding: 1vh 2vh;
 }
 
 
 .match-players-container{
     background-color: aliceblue;
+    width:10vw;
     border-radius: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+}
+
+.match-player{
+  max-width:10vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 #sitting-heading{

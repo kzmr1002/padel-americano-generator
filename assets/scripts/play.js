@@ -2,6 +2,8 @@ let pointsPerMatch = 24;
 let playerScores = {};
 let rounds = [];
 let actRound = 1;
+let currentSitting = [];
+let sittingCounts = {}; 
 
 //window onload
 window.onload = () => {
@@ -17,6 +19,7 @@ window.onload = () => {
         if (!(name in playerScores)) {
             playerScores[name] = 0;
         }
+		sittingCounts[name] = 0;
     });
 
     const { matches, sitting } = generateMatches(players);
@@ -26,22 +29,43 @@ window.onload = () => {
     renderLeaderboard();
 };
 
-  
+
+
 
 
 //generate matches function
 function generateMatches(players) {
-    const shuffled = [...players].sort(() => Math.random() - 0.5);
+    const playersCopy = [...players];
+	
+	//sittingplayers count
+    const totalPlayers = players.length;
+    const numPlaying = Math.floor(totalPlayers / 4) * 4;
+    const numSitting = totalPlayers - numPlaying;
+
+    // sort players by sitting count
+    playersCopy.sort((a, b) => sittingCounts[a] - sittingCounts[b]);
+    
+	// update sitting number for sitting players
+	const sitting = playersCopy.slice(0, numSitting);
+    sitting.forEach(name => {
+        sittingCounts[name]++;
+    });
+
+	//playing number
+    const playing = playersCopy.slice(numSitting);
+
+    //shuffle players
+    const shuffled = [...playing].sort(() => Math.random() - 0.5);
+
     const matches = [];
-  
     while (shuffled.length >= 4) {
-      const match = shuffled.splice(0, 4); 
-      matches.push(match);
+        const match = shuffled.splice(0, 4);
+        matches.push(match);
     }
-  
-    const sitting = [...shuffled];
+
     return { matches, sitting };
-  }
+}
+
 
 
 
@@ -68,7 +92,17 @@ function renderMatches(matches, sitting,pointsPerMatch) {
         //team1
         const team1 = document.createElement('div');
         team1.className = 'match-players-container';
-        team1.innerHTML = `<div class="match-player">${p1}</div><div class="match-player">${p2}</div>`;
+		
+        const p1Div = document.createElement('div');
+		p1Div.className = 'match-player';
+		p1Div.textContent = p1;
+
+		const p2Div = document.createElement('div');
+		p2Div.className = 'match-player';
+		p2Div.textContent = p2;
+
+		team1.appendChild(p1Div);
+		team1.appendChild(p2Div);
   
 
 
@@ -88,7 +122,7 @@ function renderMatches(matches, sitting,pointsPerMatch) {
         }
 
 
-        // fill automaticly when selected one
+        //both fill automaticly when one is selected
         selectLeft.addEventListener('change', () => {
             const leftVal = parseInt(selectLeft.value);
             selectRight.value = pointsPerMatch - leftVal;
@@ -99,18 +133,32 @@ function renderMatches(matches, sitting,pointsPerMatch) {
             selectLeft.value = pointsPerMatch - rightVal;
         });
 
+
+		
         score.appendChild(selectLeft);
         score.appendChild(document.createTextNode(' vs '));
         score.appendChild(selectRight);
-
+		
 
 
 
         // team2
         const team2 = document.createElement('div');
         team2.className = 'match-players-container';
-        team2.innerHTML = `<div class="match-player">${p3}</div><div class="match-player">${p4}</div>`;
-  
+
+        const p3Div = document.createElement('div');
+		p3Div.className = 'match-player';
+		p3Div.textContent = p3;
+
+		const p4Div = document.createElement('div');
+		p4Div.className = 'match-player';
+		p4Div.textContent = p4;
+
+		team2.appendChild(p3Div);
+		team2.appendChild(p4Div);
+
+
+		//add teams and score to matchdiv
         matchDiv.appendChild(team1);
         matchDiv.appendChild(score);
         matchDiv.appendChild(team2);
@@ -123,6 +171,8 @@ function renderMatches(matches, sitting,pointsPerMatch) {
         li.textContent = player;
         sittingList.appendChild(li);
       });
+
+	currentSitting = sitting;
 }
 
 
@@ -161,6 +211,16 @@ document.getElementById('complete-round-btn').addEventListener('click', () => {
         roundData.push({ team1, team2, score1, score2 });
     });
 
+
+	// update sitting players with half of max points
+	const sittingBonus = Math.floor(pointsPerMatch / 2);
+	currentSitting.forEach(player => {
+		if (player in playerScores) {
+			playerScores[player] += sittingBonus;
+		}
+	});
+
+
     rounds.push(roundData);
     renderLeaderboard();
     alert("Round saved !");
@@ -175,6 +235,12 @@ document.getElementById('complete-round-btn').addEventListener('click', () => {
 
 //new round button
 document.getElementById('new-round-btn').addEventListener('click', () => {
+
+    if(!document.getElementById('complete-round-btn').disabled){
+        alert("Please press 'Complete round' first before starting a new round!");
+		return;
+    }
+
     const allPlayers = Object.keys(playerScores);
     const { matches, sitting } = generateMatches(allPlayers);
     renderMatches(matches, sitting, pointsPerMatch);
