@@ -5,7 +5,7 @@ A fully frontend-based application to manage and simulate a Mexicano-style padel
 
 ---
 
-# About Mexicano Format
+## About Mexicano Format
 
 In Mexicano tournaments, players are paired in a way that balances team strength and fairness. Higher-ranked players are distributed across matches to ensure fun and challenging games. Players take turns sitting out, and everyone gets a fair amount of playtime. Unlike Americano, pairings are not random but follow a strategic rotation based on current standings.
 
