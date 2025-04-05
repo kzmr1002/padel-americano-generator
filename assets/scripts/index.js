@@ -14,6 +14,13 @@ const players = [];
 addPlayerBtn.addEventListener('click',() =>{
     //add player to players
     const name = playerInput.value.trim();
+
+    //if name form is empty alert
+    if(name==''){
+        alert('Insert player name please');
+        return;
+    }
+
     players.push(name);
 
     //add list item to list
