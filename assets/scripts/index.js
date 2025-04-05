@@ -4,7 +4,7 @@ const playerList=document.getElementById('player-list');
 const createBtn = document.getElementById('create-btn');
 const tournamentNameInput = document.getElementById('tournament-name');
 const pointNumberInput = document.getElementById('point-number');
-const courtNumberInput = document.getElementById('court-number');
+
 
 const players = [];
 
@@ -37,10 +37,10 @@ addPlayerBtn.addEventListener('click',() =>{
 createBtn.addEventListener('click',()=>{
     const tournamentName = tournamentNameInput.value.trim();
     const pointsPerMatch = pointNumberInput.value.trim();
-    const courtNumber = courtNumberInput.value.trim();
+
 
     //check if every form is filled
-    if(!tournamentName || !pointsPerMatch || !courtNumber ||players.length < 4){
+    if(!tournamentName || !pointsPerMatch ||players.length < 4){
         alert("Please fill out all forms and add at least 4 players!");
         return;
     }
@@ -51,17 +51,9 @@ createBtn.addEventListener('click',()=>{
         return;
     }
 
-    //check if courtNumber is a number
-    if(isNaN(Number(courtNumber))){
-        alert("The 'Number of Courts' field must contain a number");
-        return;
-    }
-
-
 
     localStorage.setItem('tournamentName', tournamentName);
     localStorage.setItem('pointsPerMatch', pointsPerMatch);
-    localStorage.setItem('courtNumber', courtNumber);
     localStorage.setItem('players', JSON.stringify(players));
 
     //switch to game window
