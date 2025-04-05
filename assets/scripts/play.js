@@ -33,38 +33,46 @@ window.onload = () => {
 
 
 
-//generate matches function
+
+//generate pairings for matches function
 function generateMatches(players) {
     const playersCopy = [...players];
-	
-	//sittingplayers count
     const totalPlayers = players.length;
     const numPlaying = Math.floor(totalPlayers / 4) * 4;
     const numSitting = totalPlayers - numPlaying;
 
-    // sort players by sitting count
+    // sitting players
     playersCopy.sort((a, b) => sittingCounts[a] - sittingCounts[b]);
-    
-	// update sitting number for sitting players
-	const sitting = playersCopy.slice(0, numSitting);
-    sitting.forEach(name => {
-        sittingCounts[name]++;
-    });
+    const sitting = playersCopy.slice(0, numSitting);
+    sitting.forEach(name => sittingCounts[name]++);
 
-	//playing number
+    // non-sitting players
     const playing = playersCopy.slice(numSitting);
 
-    //shuffle players
-    const shuffled = [...playing].sort(() => Math.random() - 0.5);
+    // sort players in descending order by points
+    playing.sort((a, b) => playerScores[b] - playerScores[a]);
 
     const matches = [];
-    while (shuffled.length >= 4) {
-        const match = shuffled.splice(0, 4);
+    let i = 0;
+
+	//pairing players
+    while (i + 3 < playing.length) {
+        const p1 = playing[i];
+        const p2 = playing[i + 1];
+        const p3 = playing[i + 2];
+        const p4 = playing[i + 3];
+
+        
+        const match = [p1, p4, p2, p3];
         matches.push(match);
+        i += 4;
     }
 
     return { matches, sitting };
 }
+
+
+
 
 
 

@@ -1,14 +1,21 @@
-# Padel Americano Tournament App
+# Padel Mexicano Tournament App
 
-This is a fully frontend-based application to manage and simulate an Americano-style padel tournament. Add players, define match rules, generate randomized matches, track scores, and view a live-updating leaderboard. All in your browser.
+A fully frontend-based application to manage and simulate a Mexicano-style padel tournament. Add players, define match rules, generate smart match pairings, track scores, and view a live-updating leaderboard. All in your browser.
+
+
+---
+
+# About Mexicano Format
+
+In Mexicano tournaments, players are paired in a way that balances team strength and fairness. Higher-ranked players are distributed across matches to ensure fun and challenging games. Players take turns sitting out, and everyone gets a fair amount of playtime. Unlike Americano, pairings are not random but follow a strategic rotation based on current standings.
 
 ---
 
 ## Features
 
 - Add any number of players 
-- Set custom number of courts and points per match
-- Randomized team matchups for each round
+- Set custom number points per match
+- Smart and fair team matchups based on rankings
 - Automatic score calculation between teams
 - Keeps track of individual player scores
 - Live leaderboard after each round
@@ -19,7 +26,7 @@ This is a fully frontend-based application to manage and simulate an Americano-s
 ## How to Use
 
 1. Open `index.html` in your browser
-2. Fill in tournament name, points per match, and number of courts
+2. Fill in tournament name, points per match
 3. Add players 
 4. Click "Create Tournament"
 5. On the next page:
@@ -55,5 +62,5 @@ results.html     # Final leaderboard
 ## Limitations
 
 - No persistent backend (data stored in browser)
-- Page refresh will reset tournament unless stored in future update
+
 
