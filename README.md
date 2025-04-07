@@ -1,4 +1,4 @@
-# Padel Mexicano Tournament App
+# 🎾Padel Mexicano Tournament App
 
 [![Live on Netlify]](https://relaxed-malabi-0236c1.netlify.app/)
 
