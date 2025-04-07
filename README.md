@@ -1,7 +1,8 @@
 # Padel Mexicano Tournament App
 
-A fully frontend-based application to manage and simulate a Mexicano-style padel tournament. Add players, define match rules, generate smart match pairings, track scores, and view a live-updating leaderboard. All in your browser.
+[![Live on Netlify]](https://relaxed-malabi-0236c1.netlify.app/)
 
+A fully frontend-based application to manage and simulate a Mexicano-style padel tournament. Add players, define match rules, generate smart match pairings, track scores, and view a live-updating leaderboard. All in your browser.
 
 ---
 
@@ -11,9 +12,27 @@ In Mexicano tournaments, players are paired in a way that balances team strength
 
 ---
 
+## Screenshots
+
+### Tournament details forms
+
+![Forms](screenshots/forms.png)
+
+### Standings and scores of rounds
+
+![Play](screenshots/play.png)
+
+### Leaderboard each round
+
+![Leaderboard](screenshots/leaderboard.png)
+
+### Final Standings
+
+![FinalStandings](screenshots/finish.png)
+
 ## Features
 
-- Add any number of players 
+- Add any number of players
 - Set custom number points per match
 - Smart and fair team matchups based on rankings
 - Automatic score calculation between teams
@@ -27,7 +46,7 @@ In Mexicano tournaments, players are paired in a way that balances team strength
 
 1. Open `index.html` in your browser
 2. Fill in tournament name, points per match
-3. Add players 
+3. Add players
 4. Click "Create Tournament"
 5. On the next page:
    - Enter match results
@@ -40,13 +59,13 @@ In Mexicano tournaments, players are paired in a way that balances team strength
 ## Project Structure
 
 assets/
-  img/           # Background image(s)
-  styles/        # CSS files (one per view)
-  scripts/       # JS files (one per view)
+img/ # Background image(s)
+styles/ # CSS files (one per view)
+scripts/ # JS files (one per view)
 
-index.html       # Tournament setup page
-play.html        # Live match round view
-results.html     # Final leaderboard
+index.html # Tournament setup page
+play.html # Live match round view
+results.html # Final leaderboard
 
 ---
 
@@ -55,12 +74,10 @@ results.html     # Final leaderboard
 - HTML5
 - CSS3
 - JavaScript (Vanilla)
-- LocalStorage API 
+- LocalStorage API
 
 ---
 
 ## Limitations
 
 - No persistent backend (data stored in browser)
-
-
